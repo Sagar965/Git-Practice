@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        section {
+            width: 60%;
+        }
+        aside {
+            width: 30%;
+            background-color: #e4e4e4;
+            padding: 10px;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        figure {
+            margin: 0;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to the Home Section</h2>
+            <p>This is the home section of the website where the introduction is given. You can find information about the website here.</p>
+        </section>
+
+        <article>
+            <header id="about">
+                <h3>Understanding HTML5 Semantic Elements</h3>
+                <p>By John Doe | Published on: March 25, 2025</p>
+            </header>
+            <p>HTML5 introduces several new semantic elements to enhance the structure and accessibility of web pages. These include elements like <strong>article</strong>, <strong>aside</strong>, <strong>header</strong>, <strong>footer</strong>, and more. These elements provide better structure and improve SEO.</p>
+            <footer>
+                <p>Article Footer: For more details, explore the HTML5 specifications.</p>
+            </footer>
+        </article>
+
+        <aside>
+            <h3>Related Articles</h3>
+            <ul>
+                <li><a href="#">Learning Semantic HTML5</a></li>
+                <li><a href="#">CSS Grid Layouts</a></li>
+                <li><a href="#">JavaScript Fundamentals</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <section>
+        <h3 id="contact">Contact Us</h3>
+        <p>If you have any questions or want to get in touch with us, please feel free to <a href="#contact-form">contact us</a>.</p>
+    </section>
+
+    <figure>
+        <img src="https://www.wikihow.com/images/thumb/7/76/Write-Good-Captions-in-Photojournalism-Step-7.jpg/v4-460px-Write-Good-Captions-in-Photojournalism-Step-7.jpg" alt="Sample Image" width="300">
+        <figcaption>This is a sample image with a caption explaining what the image is about.</figcaption>
+    </figure>
+
+    <footer>
+        <p>&copy; 2025 My Webpage. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
