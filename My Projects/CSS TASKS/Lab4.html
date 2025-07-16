@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4: Navbar & Media Queries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* 1. Horizontal Navbar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Using flexbox for even spacing, but inline-block is also an option */
+            justify-content: center; /* Center items if using flex */
+        }
+
+        .navbar li {
+            /* For display: inline-block; */
+            /* display: inline-block; */
+            /* margin: 0 15px; */
+
+            /* For display: flex; (already on ul) */
+            margin: 0 15px; /* Spacing between items */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            display: block; /* Make the whole link clickable */
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 2. Responsive Media Query */
+        @media (max-width: 600px) {
+            .navbar ul {
+                flex-direction: column; /* Stack vertically */
+                align-items: center; /* Center items horizontally in vertical stack */
+            }
+
+            .navbar li {
+                margin: 5px 0; /* Adjust vertical spacing */
+                width: 100%; /* Full width for stacked items */
+            }
+
+            .navbar a {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Responsive Navigation Bar</h1>
+        <p>Resize your browser window to see the navigation bar change from horizontal to vertical at 600px width or less.</p>
+        
+    </div>
+</body>
+</html>

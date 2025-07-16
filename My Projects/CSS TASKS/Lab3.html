@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Positioning & Float</title>
+    <style>
+        body {
+            margin: 0; /* Remove default body margin */
+            font-family: Arial, sans-serif;
+            min-height: 1500px; /* To demonstrate sticky header and scrolling */
+        }
+
+        /* 3. Sticky Header */
+        .sticky-header {
+            position: fixed; /* Stays at the top when scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        .content-wrapper {
+            margin-top: 70px; /* Space for the fixed header */
+            padding: 20px;
+            display: flow-root; /* To contain floats */
+        }
+
+        /* 1. Float Image */
+        .float-image {
+            float: left; /* Floats the image to the left */
+            margin-right: 20px; /* Space to the right of the image */
+            margin-bottom: 10px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* 2. Two-Column Layout */
+        .sidebar {
+            position: absolute; /* Positioned relative to the nearest positioned ancestor (body in this case) */
+            top: 400px; /* Below the fixed header */
+            left: 0;
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 15px;
+            min-height: 400px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .main-content {
+            margin-left: 240px; /* Space for the sidebar */
+            padding: 15px;
+        }
+
+        /* Clearfix to ensure parent contains floats if needed */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header class="sticky-header">
+        <h1>Sticky Header</h1>
+    </header>
+
+    <div class="content-wrapper">
+        <h2>Floating Image Example</h2>
+        <div class="clearfix">
+            
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3SwwQp_JZ1vjxqXeC6Oikp-TLWUWzSSR9hQ&s" alt="Float Example" class="float-image">
+            <p>
+                This paragraph wraps around the image that is floated to the left. The float property takes the element out of the normal document flow and places it to the left or right of its container. Other content then flows around it. This is a common technique for text wrapping around images in articles or blog posts. It's important to clear floats when they are no longer needed to prevent layout issues.
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Two-Column Layout</h2>
+        <div class="sidebar">
+            <h3>Sidebar Navigation</h3>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h3>Main Content Area</h3>
+            <p>
+                This is the main content area of our two-column layout. The sidebar is positioned absolutely, and the main content has a left margin to make space for it. Absolute positioning takes an element completely out of the document flow, positioning it relative to its closest *positioned* ancestor. If no positioned ancestor exists, it's relative to the initial containing block (usually the `<html>` element).
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+                Scroll down to see the sticky header in action!
+            </p>
+            <p>
+                More content to ensure scrolling...
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

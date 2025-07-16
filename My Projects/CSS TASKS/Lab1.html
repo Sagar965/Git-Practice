@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1: CSS Selectors</title>
+    <style>
+        /* 2. Element Selector */
+        p {
+            color: #333; /* Dark gray color */
+        }
+
+        /* 3. Class Selector */
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        /* 4. Attribute Selector */
+        a[href*="http"] {
+            text-decoration: none; 
+            background-color: yellow;
+        }
+
+        /* 5. Pseudo-class: :hover */
+        button:hover {
+            background-color: rgb(83, 246, 94);
+            cursor: pointer;
+        }
+
+        /* 5. Pseudo-element: ::first-letter */
+        #unique-div::first-letter {
+            font-size: 2em;
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        /* 6. :nth-child(even) */
+        ul li:nth-child(even) {
+            background-color: #f0f0f0; /* Light gray */
+        }
+
+        /* 7. ::before pseudo-element */
+        h2::before {
+            content: "✨ "; 
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding CSS Selectors</h1>
+    <p>This is a regular paragraph.</p>
+    <p>Another paragraph to demonstrate element selection.</p>
+
+    <h2>List of Cricketers</h2>
+    <ul>
+        <li>Virat Kohli</li>
+        <li class="highlight">MS Dhoni</li>
+        <li>Rohit Sharma</li>
+        <li class="highlight">Jasprit Bumrah</li>
+        <li>Ajinkya Rahane</li>
+        <li class="highlight">Bhuvaneshwar Kumar</li>
+    </ul>
+
+    <h3>Links</h3>
+    <a href="https://www.google.com">Google (http link)</a><br>
+    <a href="https://www.cricbuzz.com">Cricbuzz (http link)</a><br>
+    <a href="/about.html">About Us (relative link)</a><br>
+
+    <h3>Hover Effect</h3>
+    <button>Hover Over Me!</button>
+
+    <h3>Pseudo-element Example</h3>
+    <div id="unique-div">
+        This div demonstrates the: first-letter pseudo-element.
+    </div>
+</body>
+</html>
